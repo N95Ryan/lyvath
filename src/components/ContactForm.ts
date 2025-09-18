@@ -20,7 +20,7 @@ export function initContactForm(): void {
       // Vérification du délai minimum entre les soumissions
       const now = Date.now();
       if (now - lastSubmitTime < MIN_SUBMIT_INTERVAL) {
-        errorMessage.textContent = "Veuillez attendre avant d'envoyer un nouveau message";
+        errorMessage.textContent = "Veuillez attendre avant d'envoyer un nouveau message.";
         errorMessage.classList.remove("hidden");
         successMessage.classList.add("hidden");
         setTimeout(() => {
