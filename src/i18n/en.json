@@ -68,26 +68,26 @@
       {
         "type": "Short mission",
         "duration": "1 - 14 days",
-        "france": "450 €",
-        "international": "600 $"
+        "france": "450€",
+        "international": "600$"
       },
       {
         "type": "Standard mission",
         "duration": "1 - 3 months",
-        "france": "400 €",
-        "international": "500 $"
+        "france": "400€",
+        "international": "500$"
       },
       {
         "type": "Long mission",
         "duration": "+3 months",
-        "france": "350 €",
-        "international": "450 $"
+        "france": "300€",
+        "international": "400$"
       },
       {
         "type": "Emergency",
         "duration": "Evening / weekend",
-        "france": "500 €",
-        "international": "650 $"
+        "france": "500€",
+        "international": "600$"
       }
     ],
     "labels": {
