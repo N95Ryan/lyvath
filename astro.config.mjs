@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import astroI18next from 'astro-i18next';
 import react from '@astrojs/react';
 import vercel from '@astrojs/vercel';
@@ -10,7 +9,6 @@ export default defineConfig({
   adapter: vercel(),
   site: 'https://code-by-nayru.vercel.app',
   integrations: [
-    tailwind(),
     react(),
     astroI18next({
       defaultLocale: 'fr',
