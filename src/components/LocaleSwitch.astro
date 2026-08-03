@@ -34,28 +34,6 @@ const currentLang = Astro.url.pathname.split("/")[1] || "fr";
 </div>
 
 <script>
-  let lastScrollY = window.scrollY;
-  const localeSwitch = document.getElementById("locale-switch");
-  let isVisible = true;
-
-  if (localeSwitch) {
-    window.addEventListener("scroll", () => {
-      const currentScrollY = window.scrollY;
-
-      // En mobile uniquement
-      if (window.innerWidth < 768) {
-        if (currentScrollY > lastScrollY && isVisible) {
-          // Scroll vers le bas
-          localeSwitch.style.transform = "translateY(-100%)";
-          isVisible = false;
-        } else if (currentScrollY < lastScrollY && !isVisible) {
-          // Scroll vers le haut
-          localeSwitch.style.transform = "translateY(0)";
-          isVisible = true;
-        }
-      }
-
-      lastScrollY = currentScrollY;
-    });
-  }
+  import { initLocaleSwitch } from "../scripts/localeSwitch.ts";
+  initLocaleSwitch();
 </script>

@@ -134,6 +134,8 @@ const t = getTranslator(lang as "fr" | "en");
 </section>
 
 <script>
-  import { initContactForm } from "./ContactForm";
-  initContactForm();
+  import { initContactForm } from "../scripts/contactForm.ts";
+
+  const contactSection = document.getElementById("contact");
+  if (contactSection) initContactForm(contactSection);
 </script>
