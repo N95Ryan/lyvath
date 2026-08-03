@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import astroI18next from 'astro-i18next';
 import react from '@astrojs/react';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
@@ -39,20 +39,9 @@ export default defineConfig({
         '@': '/src'
       }
     },
-    optimizeDeps: {
-      include: ['@astrojs/astro']
-    },
     build: {
       minify: true,
       cssMinify: true,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom'],
-            'i18n-vendor': ['i18next', 'i18next-fs-backend']
-          }
-        }
-      }
     }
   },
   compressHTML: true
