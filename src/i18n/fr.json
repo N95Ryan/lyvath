@@ -102,6 +102,8 @@
     "subject": "Objet",
     "message": "Message",
     "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "tooFast": "Soumission trop rapide. Veuillez réessayer.",
     "success": "Message envoyé avec succès !",
     "error": "Une erreur est survenue. Veuillez réessayer."
   },

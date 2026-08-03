@@ -9,10 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.3.0",
+    "@astrojs/react": "^6.0.2",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.8",
-    "astro": "^5.9.1",
+    "astro": "^7.1.6",
     "astro-i18next": "^1.0.0-beta.21",
     "i18next": "^25.1.2",
     "i18next-fs-backend": "^2.6.0",
