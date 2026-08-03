@@ -4,7 +4,7 @@ export function initContactForm(): void {
   const errorMessage = document.getElementById("error-message");
   const submitButton = form?.querySelector<HTMLButtonElement>("button[type='submit']");
 
-  const API_URL = import.meta.env.VITE_API_URL || "https://code-by-nayru-back-production.up.railway.app/api/contact";
+  const API_URL = "/api/contact";
   const currentLocale = document.documentElement.lang || "fr";
   const formLoadedAt = Date.now();
 
@@ -35,10 +35,8 @@ export function initContactForm(): void {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Origin: window.location.origin,
           },
           body: JSON.stringify(data),
-          credentials: "include",
         });
 
         const result = await response.json();
