@@ -87,3 +87,19 @@ export function validateSubmissionTiming(formLoadedAt: number): string | null {
   }
   return null;
 }
+
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+export function validateEmail(email: string): string | null {
+  const trimmed = email.trim();
+  if (!trimmed) {
+    return "L'email est obligatoire";
+  }
+  if (trimmed.length > FIELD_LIMITS.emailMax) {
+    return "L'email ne doit pas dépasser 254 caractères";
+  }
+  if (!EMAIL_REGEX.test(trimmed)) {
+    return "Format d'email invalide";
+  }
+  return null;
+}
