@@ -16,11 +16,6 @@ const {
   lang,
 } = Astro.props;
 
-// Redirection vers l'anglais si la langue n'est pas spécifiée
-if (!lang) {
-  return Astro.redirect("/en/");
-}
-
 const t = getTranslator(lang);
 
 // Traductions des métadonnées
@@ -33,8 +28,10 @@ const metaDescription =
 const metaLanguage = lang === "fr" ? "French" : "English";
 const metaLocale = lang === "fr" ? "fr_FR" : "en_US";
 
-// URL canonique avec la langue
-const canonicalUrl = `https://codebynayru.com/${lang}/`;
+const canonicalUrl =
+  lang === "en"
+    ? "https://codebynayru.com/"
+    : `https://codebynayru.com/${lang}/`;
 ---
 
 <!doctype html>

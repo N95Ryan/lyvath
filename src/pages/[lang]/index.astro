@@ -7,38 +7,25 @@ import Projects from "../../components/Projects.astro";
 import Pricing from "../../components/Pricing.astro";
 import Contact from "../../components/Contact.astro";
 import Footer from "../../components/Footer.astro";
-import { getTranslator, languages } from "../../i18n";
-
-// Définir les chemins statiques pour chaque langue
 export function getStaticPaths() {
-  return languages.map((lang) => ({
-    params: { lang },
-  }));
+  return [{ params: { lang: "fr" } }];
 }
 
-// Récupérer la langue depuis le paramètre de route
 const { lang } = Astro.params;
 
-// Rediriger vers la page anglaise si la langue n'est pas supportée
-if (!lang || !["fr", "en"].includes(lang)) {
-  return Astro.redirect("/en/");
+if (lang !== "fr") {
+  return Astro.redirect("/");
 }
-
-// S'assurer que lang est de type "fr" | "en"
-const validLang = lang as "fr" | "en";
-
-// Obtenir la fonction de traduction
-const t = getTranslator(validLang);
 ---
 
-<Layout lang={validLang}>
+<Layout lang="fr">
   <main class="container mx-auto px-4 py-8">
-    <Hero lang={validLang} />
-    <About lang={validLang} />
-    <Services lang={validLang} />
-    <Projects lang={validLang} />
-    <Pricing lang={validLang} />
-    <Contact lang={validLang} />
+    <Hero lang="fr" />
+    <About lang="fr" />
+    <Services lang="fr" />
+    <Projects lang="fr" />
+    <Pricing lang="fr" />
+    <Contact lang="fr" />
   </main>
-  <Footer lang={validLang} />
+  <Footer lang="fr" />
 </Layout>

@@ -24,7 +24,7 @@ export default defineConfig({
           prefixDefaultLocale: true,
         },
         en: {
-          prefixDefaultLocale: true,
+          prefixDefaultLocale: false,
         },
       },
     }),
