@@ -1,5 +1,6 @@
 ---
-const currentLang = Astro.url.pathname.split("/")[1] || "en";
+const firstSegment = Astro.url.pathname.split("/").filter(Boolean)[0];
+const currentLang = firstSegment === "fr" ? "fr" : "en";
 ---
 
 <div
@@ -8,7 +9,7 @@ const currentLang = Astro.url.pathname.split("/")[1] || "en";
 >
   <div class="flex justify-center items-center gap-3 py-2">
     <a
-      href="/en"
+      href="/"
       class:list={[
         "px-3 py-1.5 text-lg rounded-md transition-all duration-200",
         currentLang === "en"
