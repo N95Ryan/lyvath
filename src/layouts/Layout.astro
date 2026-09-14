@@ -16,9 +16,9 @@ const {
   lang,
 } = Astro.props;
 
-// Redirection vers le français si la langue n'est pas spécifiée
+// Redirection vers l'anglais si la langue n'est pas spécifiée
 if (!lang) {
-  return Astro.redirect("/fr/");
+  return Astro.redirect("/en/");
 }
 
 const t = getTranslator(lang);

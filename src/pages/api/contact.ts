@@ -40,7 +40,7 @@ export const POST: APIRoute = async ({ request }) => {
   const email = String(payload.email ?? "").trim();
   const subject = String(payload.subject ?? "").trim();
   const message = String(payload.message ?? "").trim();
-  const locale = String(payload.locale ?? "fr");
+  const locale = String(payload.locale ?? "en");
   const company = String(payload.company ?? "");
   const formLoadedAt = Number(payload.formLoadedAt ?? 0);
 

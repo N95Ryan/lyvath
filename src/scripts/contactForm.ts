@@ -5,7 +5,7 @@ export function initContactForm(root: HTMLElement): void {
   const submitButton = form?.querySelector<HTMLButtonElement>("button[type='submit']");
 
   const API_URL = "/api/contact";
-  const currentLocale = document.documentElement.lang || "fr";
+  const currentLocale = document.documentElement.lang || "en";
   const formLoadedAt = Date.now();
 
   const defaultSendLabel =
