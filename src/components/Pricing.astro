@@ -11,34 +11,29 @@ const t = getTranslator(lang);
 interface PriceRow {
   type: string;
   duration: string;
-  france: string;
-  international: string;
+  rate: string;
 }
 
 const priceRows: PriceRow[] = [
   {
     type: t("pricing.rows.0.type"),
     duration: t("pricing.rows.0.duration"),
-    france: t("pricing.rows.0.france"),
-    international: t("pricing.rows.0.international"),
+    rate: t("pricing.rows.0.rate"),
   },
   {
     type: t("pricing.rows.1.type"),
     duration: t("pricing.rows.1.duration"),
-    france: t("pricing.rows.1.france"),
-    international: t("pricing.rows.1.international"),
+    rate: t("pricing.rows.1.rate"),
   },
   {
     type: t("pricing.rows.2.type"),
     duration: t("pricing.rows.2.duration"),
-    france: t("pricing.rows.2.france"),
-    international: t("pricing.rows.2.international"),
+    rate: t("pricing.rows.2.rate"),
   },
   {
     type: t("pricing.rows.3.type"),
     duration: t("pricing.rows.3.duration"),
-    france: t("pricing.rows.3.france"),
-    international: t("pricing.rows.3.international"),
+    rate: t("pricing.rows.3.rate"),
   },
 ];
 ---
@@ -63,24 +58,13 @@ const priceRows: PriceRow[] = [
                 {row.duration}
               </div>
             </div>
-            <div class="flex flex-col gap-2 w-full flex-grow justify-center">
-              <div class="flex flex-col items-center">
-                <span class="text-xs text-gray-400">
-                  {t("pricing.labels.france")}
-                </span>
-                <span class="text-3xl font-bold text-indigo-400">
-                  {row.france}
-                </span>
-              </div>
-              <hr class="my-2 border-t border-white/20 w-2/3 mx-auto" />
-              <div class="flex flex-col items-center">
-                <span class="text-xs text-gray-400">
-                  {t("pricing.labels.international")}
-                </span>
-                <span class="text-3xl font-bold text-indigo-400">
-                  {row.international}
-                </span>
-              </div>
+            <div class="flex flex-col items-center w-full flex-grow justify-center">
+              <span class="text-xs text-gray-400">
+                {t("pricing.labels.rate")}
+              </span>
+              <span class="text-3xl font-bold text-indigo-400">
+                {row.rate}
+              </span>
             </div>
           </div>
         ))
