@@ -9,7 +9,7 @@ export default defineConfig({
   site: "https://code-by-nayru.vercel.app",
   integrations: [
     astroI18next({
-      defaultLocale: "fr",
+      defaultLocale: "en",
       locales: ["fr", "en"],
       i18next: {
         debug: false,

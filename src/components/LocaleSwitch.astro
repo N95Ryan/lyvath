@@ -1,5 +1,5 @@
 ---
-const currentLang = Astro.url.pathname.split("/")[1] || "fr";
+const currentLang = Astro.url.pathname.split("/")[1] || "en";
 ---
 
 <div
@@ -7,18 +7,6 @@ const currentLang = Astro.url.pathname.split("/")[1] || "fr";
   class="fixed top-0 left-0 right-0 z-50 bg-white/40 backdrop-blur-sm md:relative md:bg-transparent transition-transform duration-300"
 >
   <div class="flex justify-center items-center gap-3 py-2">
-    <a
-      href="/fr"
-      class:list={[
-        "px-3 py-1.5 text-lg rounded-md transition-all duration-200",
-        currentLang === "fr"
-          ? "bg-gray-800 text-white font-semibold shadow-md"
-          : "text-gray-700 hover:bg-gray-100",
-      ]}
-    >
-      FR
-    </a>
-    <span class="text-gray-500 text-lg font-medium">/</span>
     <a
       href="/en"
       class:list={[
@@ -29,6 +17,18 @@ const currentLang = Astro.url.pathname.split("/")[1] || "fr";
       ]}
     >
       EN
+    </a>
+    <span class="text-gray-500 text-lg font-medium">/</span>
+    <a
+      href="/fr"
+      class:list={[
+        "px-3 py-1.5 text-lg rounded-md transition-all duration-200",
+        currentLang === "fr"
+          ? "bg-gray-800 text-white font-semibold shadow-md"
+          : "text-gray-700 hover:bg-gray-100",
+      ]}
+    >
+      FR
     </a>
   </div>
 </div>

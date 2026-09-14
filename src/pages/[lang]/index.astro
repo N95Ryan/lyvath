@@ -19,9 +19,9 @@ export function getStaticPaths() {
 // Récupérer la langue depuis le paramètre de route
 const { lang } = Astro.params;
 
-// Rediriger vers la page française si la langue n'est pas supportée
+// Rediriger vers la page anglaise si la langue n'est pas supportée
 if (!lang || !["fr", "en"].includes(lang)) {
-  return Astro.redirect("/fr/");
+  return Astro.redirect("/en/");
 }
 
 // S'assurer que lang est de type "fr" | "en"
