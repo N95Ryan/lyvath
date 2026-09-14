@@ -5,9 +5,9 @@
   },
   "about": {
     "title": "À propos",
-    "description": "Code by Nayru est une micro-entreprise française spécialisée dans le développement web et mobile. Je crée des solutions sur mesure pour les indépendants, startups et PME, en mettant l'accent sur la qualité, l'innovation et l'expérience utilisateur.",
+    "description": "Code by Nayru est une entreprise spécialisée dans le développement d'applications web et mobile. Je crée des solutions sur mesure pour les indépendants, startups et PME, en mettant l'accent sur la qualité, l'innovation et l'expérience utilisateur.",
     "goal": {
-      "title": "🎯 Mon objectif est simple :",
+      "title": "🎯 Mon objectif est simple :",    
       "description": "Aider les entreprises et entrepreneurs à donner vie à leurs projets digitaux avec des solutions modernes, performantes et évolutives."
     }
   },
@@ -68,31 +68,26 @@
       {
         "type": "Mission courte",
         "duration": "1 - 14 jours",
-        "france": "450 €",
-        "international": "600 $"
+        "rate": "400 $"
       },
       {
         "type": "Mission standard",
         "duration": "1 - 3 mois",
-        "france": "400 €",
-        "international": "500 $"
+        "rate": "450 $"
       },
       {
         "type": "Mission longue",
         "duration": "+3 mois",
-        "france": "350 €",
-        "international": "450 $"
+        "rate": "500 $"
       },
       {
         "type": "Urgence",
         "duration": "Soir / week-end",
-        "france": "500 €",
-        "international": "650 $"
+        "rate": "600 $"
       }
     ],
     "labels": {
-      "france": "TJM France",
-      "international": "TJM International"
+      "rate": "Taux journalier"
     }
   },
   "contact": {
