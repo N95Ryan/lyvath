@@ -7,26 +7,24 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
-  lang: "fr" | "en";
+  lang: "en" | "fr";
 }
 
 const {
-  title = "Code by Nayru • Développement Web & Mobile",
-  description = "Studio freelance de développement web et mobile, spécialisé dans la création de solutions performantes, modernes et scalables.",
+  title = "LYVATH • Software Engineering",
+  description = "No noise, no trends, no rush. Just clean software engineering, built to last.",
   lang,
 } = Astro.props;
 
 const t = getTranslator(lang);
 
-// Traductions des métadonnées
-const metaTitle =
-  lang === "fr" ? title : "Code by Nayru • Web & Mobile Development";
+const metaTitle = lang === "en" ? title : "LYVATH • Ingénierie logicielle";
 const metaDescription =
-  lang === "fr"
+  lang === "en"
     ? description
-    : "Freelance web and mobile development studio, specialized in creating performant, modern and scalable solutions.";
-const metaLanguage = lang === "fr" ? "French" : "English";
-const metaLocale = lang === "fr" ? "fr_FR" : "en_US";
+    : "Pas de bruit. Pas de trends. Pas de précipitation. De l'ingénierie logicielle propre, pensée pour le long terme.";
+const metaLanguage = lang === "en" ? "English" : "French";
+const metaLocale = lang === "en" ? "en_US" : "fr_FR";
 
 const canonicalUrl =
   lang === "en"
@@ -45,7 +43,7 @@ const canonicalUrl =
     <!-- SEO -->
     <title>{metaTitle}</title>
     <meta name="description" content={metaDescription} />
-    <meta name="author" content="Code by Nayru" />
+    <meta name="author" content="LYVATH" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Facebook -->
@@ -57,7 +55,7 @@ const canonicalUrl =
       property="og:image"
       content="https://codebynayru.com/images/og-image.jpg"
     />
-    <meta property="og:site_name" content="Code by Nayru" />
+    <meta property="og:site_name" content="LYVATH" />
     <meta property="og:locale" content={metaLocale} />
 
     <!-- Twitter -->
@@ -78,12 +76,12 @@ const canonicalUrl =
     <meta name="theme-color" content="#000000" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="application-name" content="Code by Nayru" />
+    <meta name="application-name" content="LYVATH" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Code by Nayru" />
+    <meta name="apple-mobile-web-app-title" content="LYVATH" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="MobileOptimized" content="width" />
     <meta name="revisit-after" content="7 days" />

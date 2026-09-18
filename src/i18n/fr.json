@@ -1,49 +1,38 @@
 {
   "hero": {
-    "title": "Code by Nayru",
-    "subtitle": "Développement Web & Mobile"
+    "title": "LYVATH",
+    "subtitle": "Software Engineering",
+    "tagline": "Solutions over noise."
   },
   "about": {
     "title": "À propos",
-    "description": "Code by Nayru est une entreprise spécialisée dans le développement d'applications web et mobile. Je crée des solutions sur mesure pour les indépendants, startups et PME, en mettant l'accent sur la qualité, l'innovation et l'expérience utilisateur.",
+    "description": "Je développe des applications web et mobiles, des API et des systèmes backend pour des entreprises qui ont besoin d'un logiciel qui fonctionne vraiment. React, TypeScript, Go, PostgreSQL. Pas de course aux tendances, pas de complexité inutile, juste des solutions faites pour durer.",
     "goal": {
-      "title": "🎯 Mon objectif est simple :",    
+      "title": "🎯 Mon objectif est simple :",
       "description": "Aider les entreprises et entrepreneurs à donner vie à leurs projets digitaux avec des solutions modernes, performantes et évolutives."
     }
   },
   "services": {
-    "title": "Mes services",
-    "description": "Je propose des solutions sur mesure pour les indépendants, startups et PME, en mettant l'accent sur la qualité, l'innovation et l'expérience utilisateur.",
-    "web": {
-      "title": "Développement Web",
-      "description": [
-        "Conception de sites web responsives et performants",
-        "Développement d'applications web (+PWA)",
-        "Intégration API et gestion des bases de données"
-      ]
+    "title": "Ce que je résous",
+    "build": {
+      "title": "Construire",
+      "description": "Nouvelles applications web et mobiles, API et systèmes backend.",
+      "items": ["React & Next.js", "React Native", "Go & PostgreSQL"]
     },
-    "mobile": {
-      "title": "Développement Mobile",
-      "description": [
-        "Développement d'applications mobiles hybrides",
-        "Création d'applications iOS et Android avec React Native",
-        "Optimisation des performances et de l'expérience utilisateur"
-      ]
+    "modernize": {
+      "title": "Moderniser",
+      "description": "Systèmes legacy, dette technique, architecture dépassée.",
+      "items": ["Migration vers des stacks modernes", "Audits techniques", "Refactoring progressif"]
     },
-    "performance": {
-      "title": "Optimisation de Performance",
-      "description": [
-        "Audits techniques et amélioration des performances",
-        "Optimisation SEO et des temps de chargement"
-      ]
+    "improve": {
+      "title": "Améliorer",
+      "description": "Performance, maintenabilité, fiabilité.",
+      "items": ["Core Web Vitals", "Qualité du code", "Optimisation base de données"]
     },
-    "consulting": {
-      "title": "Consultation et Formation",
-      "description": [
-        "Conseil pour les entreprises souhaitant migrer vers des solutions modernes",
-        "Formations personnalisées sur les technologies utilisées",
-        "Analyse des besoins techniques"
-      ]
+    "integrate": {
+      "title": "Intégrer",
+      "description": "API, services tiers, systèmes existants.",
+      "items": ["API REST", "Intégrations tierces", "Pipelines de données"]
     }
   },
   "projects": {

@@ -1,49 +1,38 @@
 {
   "hero": {
-    "title": "Code by Nayru",
-    "subtitle": "Web & Mobile Development"
+    "title": "LYVATH",
+    "subtitle": "Software Engineering",
+    "tagline": "Solutions over noise."
   },
   "about": {
     "title": "About",
-    "description": "Code by Nayru is a company specialized in the development of web and mobile applications. I create custom solutions for freelancers, startups, and SMEs, focusing on quality, innovation, and user experience.",
+    "description": "I build web and mobile applications, APIs, and backend systems for businesses that need software that actually works. React, TypeScript, Go, PostgreSQL. No trend-chasing, no unnecessary complexity, just solutions built to last.",
     "goal": {
       "title": "🎯 My goal is simple:",
       "description": "Help businesses and entrepreneurs bring their digital projects to life with modern, high-performance, and scalable solutions."
     }
   },
   "services": {
-    "title": "My services",
-    "description": "I offer custom solutions for freelancers, startups, and SMEs, focusing on quality, innovation, and user experience.",
-    "web": {
-      "title": "Web Development",
-      "description": [
-        "Responsive and performant website design",
-        "Web application development (+PWA)",
-        "API integration and database management"
-      ]
+    "title": "What I solve",
+    "build": {
+      "title": "Build",
+      "description": "New web and mobile applications, APIs, and backend systems.",
+      "items": ["React & Next.js", "React Native", "Go & PostgreSQL"]
     },
-    "mobile": {
-      "title": "Mobile Development",
-      "description": [
-        "Hybrid mobile application development",
-        "iOS and Android app creation with React Native",
-        "Performance and user experience optimization"
-      ]
+    "modernize": {
+      "title": "Modernize",
+      "description": "Legacy systems, technical debt, outdated architecture.",
+      "items": ["Migration to modern stacks", "Technical audits", "Incremental refactoring"]
     },
-    "performance": {
-      "title": "Performance Optimization",
-      "description": [
-        "Technical audits and performance improvement",
-        "SEO and loading time optimization"
-      ]
+    "improve": {
+      "title": "Improve",
+      "description": "Performance, maintainability, reliability.",
+      "items": ["Core Web Vitals", "Code quality", "Database optimization"]
     },
-    "consulting": {
-      "title": "Consulting and Training",
-      "description": [
-        "Advice for companies looking to migrate to modern solutions",
-        "Custom training on used technologies",
-        "Technical needs analysis"
-      ]
+    "integrate": {
+      "title": "Integrate",
+      "description": "APIs, third-party services, existing systems.",
+      "items": ["REST APIs", "Third-party integrations", "Data pipelines"]
     }
   },
   "projects": {
