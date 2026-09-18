@@ -1,15 +1,38 @@
 {
   "hero": {
     "title": "LYVATH",
-    "subtitle": "Software Engineering",
-    "tagline": "Solutions over noise."
+    "subtitle": "Ingénierie Logicielle",
+    "tagline": "Des solutions, sans superflu."
   },
   "about": {
     "title": "À propos",
-    "description": "Je développe des applications web et mobiles, des API et des systèmes backend pour des entreprises qui ont besoin d'un logiciel qui fonctionne vraiment. React, TypeScript, Go, PostgreSQL. Pas de course aux tendances, pas de complexité inutile, juste des solutions faites pour durer.",
+    "intro": {
+      "brand": "LYVATH, c'est la marque.",
+      "engineer": "Et je suis l'ingénieur logiciel derrière : spécialisé en React, Go et leurs écosystèmes."
+    },
+    "decision": "Et cette expertise vient d'un choix clair : la profondeur plutôt que l'étendue.",
+    "philosophy": "Pas de course aux tendances, pas de complexité inutile, juste des solutions pensées pour durer.",
+    "process": {
+      "title": "Ma méthode :",
+      "steps": [
+        "écouter le vrai problème",
+        "comprendre les contraintes",
+        "appliquer la bonne solution",
+        "mesurer le résultat",
+        "recommencer"
+      ]
+    },
     "goal": {
-      "title": "🎯 Mon objectif est simple :",
-      "description": "Aider les entreprises et entrepreneurs à donner vie à leurs projets digitaux avec des solutions modernes, performantes et évolutives."
+      "title": "Mon objectif est simple :",
+      "description": "Créer des choses et résoudre des problèmes, c'est ce qui me fait avancer. Je garde les deux aussi simples que nécessaire, pas plus.\n\nEt c'est ce que j'apporte à chaque client : une solution qui résout vraiment le problème, pas un pitch de plus. \n\nJuste des résultats."
+    },
+    "record": {
+      "title": "Mes résultats :",
+      "items": [
+        "Latence API réduite de 99% sur un système en production gérant un catalogue de 2M+ pièces.",
+        "Poids JavaScript réduit de 93% en reconstruisant un site legacy de zéro.",
+        "Migration de plateformes legacy vers des stacks modernes sans interruption de service, à chaque fois."
+      ]
     }
   },
   "services": {

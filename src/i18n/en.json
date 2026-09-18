@@ -6,10 +6,33 @@
   },
   "about": {
     "title": "About",
-    "description": "I build web and mobile applications, APIs, and backend systems for businesses that need software that actually works. React, TypeScript, Go, PostgreSQL. No trend-chasing, no unnecessary complexity, just solutions built to last.",
+    "intro": {
+      "brand": "LYVATH is the brand.",
+      "engineer": "And I'm the software engineer behind it: specialized in React, Go and their ecosystems."
+    },
+    "decision": "That expertise comes from one clear decision: depth over breadth.",
+    "philosophy": "No trend-chasing, no unnecessary complexity, just solutions built to last.",
+    "process": {
+      "title": "My process:",
+      "steps": [
+        "Listen to the real problem",
+        "Learn the constraints",
+        "Apply the right solution",
+        "Measure the result",
+        "Repeat"
+      ]
+    },
     "goal": {
-      "title": "🎯 My goal is simple:",
-      "description": "Help businesses and entrepreneurs bring their digital projects to life with modern, high-performance, and scalable solutions."
+      "title": "My goal is simple:",
+      "description": "Creating things and solving problems is what drives me. I keep both as simple as they need to be, nothing more.\n\nThat's what I bring to every client: a solution that actually solves the problem, not another pitch deck. \n\nJust results."
+    },
+    "record": {
+      "title": "My personal record:",
+      "items": [
+        "Cut API latency by 99% on a production system serving a 2M+ part catalog.",
+        "Reduced JavaScript payload by 93%, rebuilding a legacy site from scratch.",
+        "Migrated legacy platforms to modern stacks with zero downtime, every time."
+      ]
     }
   },
   "services": {
