@@ -6,7 +6,7 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   output: "static",
   adapter: vercel(),
-  site: "https://codebynayru.com/",
+  site: "https://www.lyvath.dev",
   integrations: [
     astroI18next({
       defaultLocale: "en",
