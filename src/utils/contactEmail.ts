@@ -97,7 +97,7 @@ export function formatContactEmailHtml(form: ContactEmailData): string {
         <div class="value message">${safeMessage}</div>
       </div>
       <div class="footer">
-        This message was sent from the Code by Nayru contact form.
+        This message was sent from the LYVATH contact form.
       </div>
     </div>
   </body>
@@ -124,7 +124,7 @@ export function formatContactEmailHtml(form: ContactEmailData): string {
         <div class="value message">${safeMessage}</div>
       </div>
       <div class="footer">
-        Ce message a été envoyé depuis le formulaire de contact de Code by Nayru.
+        Ce message a été envoyé depuis le formulaire de contact de LYVATH.
       </div>
     </div>
   </body>
