@@ -4,7 +4,7 @@ import en from "../i18n/en.json";
 import fr from "../i18n/fr.json";
 
 interface Props {
-  lang: "fr" | "en";
+  lang: "en" | "fr";
 }
 
 interface Service {
@@ -34,7 +34,7 @@ function getItems(key: string): string[] {
 
 <section id="services" class="py-20 text-white">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+    <h2 class="section-heading text-center mb-10 md:mb-14">
       {t("services.title")}
     </h2>
 
@@ -99,13 +99,18 @@ function getItems(key: string): string[] {
               <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-center">
                 {t(`services.${service.key}.title`)}
               </h3>
-              <p class="text-xs sm:text-sm text-gray-400 text-center mb-3 sm:mb-4">
+              <p class="text-xs sm:text-sm text-gray-400 text-center leading-relaxed mb-4 sm:mb-5">
                 {t(`services.${service.key}.description`)}
               </p>
-              <ul class="space-y-1 sm:space-y-2">
+              <ul class="space-y-2 sm:space-y-3">
                 {items.map((item) => (
                   <li class="text-xs sm:text-sm text-gray-300 flex items-start">
-                    <span class="text-cyan-400 mr-2 shrink-0" aria-hidden="true">•</span>
+                    <span
+                      class="text-cyan-400 mr-2 shrink-0"
+                      aria-hidden="true"
+                    >
+                      •
+                    </span>
                     {item}
                   </li>
                 ))}
