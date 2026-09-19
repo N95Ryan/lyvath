@@ -1,49 +1,62 @@
 {
   "hero": {
-    "title": "Code by Nayru",
-    "subtitle": "Web & Mobile Development"
+    "title": "LYVATH",
+    "subtitle": "Software Engineering",
+    "tagline": "Solutions over noise.",
+    "scrollLabel": "Scroll down"
   },
   "about": {
     "title": "About",
-    "description": "Code by Nayru is a company specialized in the development of web and mobile applications. I create custom solutions for freelancers, startups, and SMEs, focusing on quality, innovation, and user experience.",
+    "intro": {
+      "brand": "LYVATH is the brand.",
+      "engineer": "And I'm Ryan, the software engineer behind it. Specialized in React, Go and their ecosystems."
+    },
+    "decision": "That expertise comes from one clear decision: depth over breadth.",
+    "philosophy": "No trend-chasing, no unnecessary complexity, just solutions built to last.",
+    "process": {
+      "title": "Work process",
+      "steps": [
+        "Listen to the real problem",
+        "Learn the constraints",
+        "Apply the right solution",
+        "Measure the result",
+        "Repeat"
+      ]
+    },
     "goal": {
-      "title": "🎯 My goal is simple:",
-      "description": "Help businesses and entrepreneurs bring their digital projects to life with modern, high-performance, and scalable solutions."
+      "title": "My goal is simple:",
+      "description": "Creating things and solving problems is what drives me.\n\nI keep both as simple as they need to be, nothing more.\n\nThat's what I bring to every client: a solution that actually solves the problem. \n\nNot another pitch deck, just results."
+    },
+    "record": {
+      "title": "Personal record",
+      "items": [
+        "> Cut API latency by 99% on a production system serving a 2M+ part catalog.",
+        "> Reduced JavaScript payload by 93%, rebuilding a legacy site from scratch.",
+        "> Migrated legacy platforms to modern stacks with zero downtime, every time."
+      ]
     }
   },
   "services": {
     "title": "My services",
-    "description": "I offer custom solutions for freelancers, startups, and SMEs, focusing on quality, innovation, and user experience.",
-    "web": {
-      "title": "Web Development",
-      "description": [
-        "Responsive and performant website design",
-        "Web application development (+PWA)",
-        "API integration and database management"
-      ]
+    "build": {
+      "title": "Build",
+      "description": "I start from zero and build something that's still standing years later.",
+      "items": ["Go and REST APIs", "React / Next.js / Expo", "PostgreSQL & Supabase"]
     },
-    "mobile": {
-      "title": "Mobile Development",
-      "description": [
-        "Hybrid mobile application development",
-        "iOS and Android app creation with React Native",
-        "Performance and user experience optimization"
-      ]
+    "modernize": {
+      "title": "Modernize",
+      "description": "I take what's outdated and bring it forward, without a single second of downtime.",
+      "items": ["From legacy to modern stacks", "Technical audits", "Scalable architecture"]
     },
-    "performance": {
-      "title": "Performance Optimization",
-      "description": [
-        "Technical audits and performance improvement",
-        "SEO and loading time optimization"
-      ]
+    "improve": {
+      "title": "Improve",
+      "description": "I don't guess what's slow. I measure it, then fix it.",
+      "items": ["Core Web Vitals", "Code quality", "Database optimization"]
     },
-    "consulting": {
-      "title": "Consulting and Training",
-      "description": [
-        "Advice for companies looking to migrate to modern solutions",
-        "Custom training on used technologies",
-        "Technical needs analysis"
-      ]
+    "integrate": {
+      "title": "Integrate",
+      "description": "No API docs? I'll reverse-engineer it and make it work.",
+      "items": ["Documentation", "Reverse-engineering", "Webhooks"]
     }
   },
   "projects": {
@@ -63,32 +76,10 @@
   },
   "pricing": {
     "title": "Pricing",
-    "description": "To discuss your project or get a custom quote, feel free to contact me.",
-    "rows": [
-      {
-        "type": "Short mission",
-        "duration": "1 - 14 days",
-        "rate": "400$"
-      },
-      {
-        "type": "Standard mission",
-        "duration": "1 - 3 months",
-        "rate": "450$"
-      },
-      {
-        "type": "Long mission",
-        "duration": "+3 months",
-        "rate": "500$"
-      },
-      {
-        "type": "Emergency",
-        "duration": "Evening / weekend",
-        "rate": "600$"
-      }
-    ],
-    "labels": {
-      "rate": "Day Rate"
-    }
+    "standard": { "title": "Standard mission", "duration": "1 - 3 months", "rateLabel": "Day Rate", "rate": "350$" },
+    "long": { "title": "Long mission", "duration": "+3 months", "rateLabel": "Day Rate", "rate": "500$" },
+    "emergency": { "title": "Emergency", "duration": "Evening / weekend", "rateLabel": "Day Rate", "rate": "1000$" },
+    "note": "Need a personalized quote instead? Let's talk about it."
   },
   "contact": {
     "title": "Contact",

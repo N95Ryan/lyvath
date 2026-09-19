@@ -1,49 +1,62 @@
 {
   "hero": {
-    "title": "Code by Nayru",
-    "subtitle": "Développement Web & Mobile"
+    "title": "LYVATH",
+    "subtitle": "Ingénierie Logicielle",
+    "tagline": "Des solutions, sans superflu.",
+    "scrollLabel": "Faire défiler vers le bas"
   },
   "about": {
     "title": "À propos",
-    "description": "Code by Nayru est une entreprise spécialisée dans le développement d'applications web et mobile. Je crée des solutions sur mesure pour les indépendants, startups et PME, en mettant l'accent sur la qualité, l'innovation et l'expérience utilisateur.",
+    "intro": {
+      "brand": "LYVATH, c'est la marque.",
+      "engineer": "Et je suis Ryan, l'ingénieur logiciel derrière. Spécialisé en React, Go et leurs écosystèmes."
+    },
+    "decision": "Et cette expertise vient d'un choix clair : la profondeur plutôt que l'étendue.",
+    "philosophy": "Pas de course aux tendances, pas de complexité inutile, juste des solutions pensées pour durer.",
+    "process": {
+      "title": "Méthode",
+      "steps": [
+        "Écouter le vrai problème",
+        "Comprendre les contraintes",
+        "Appliquer la bonne solution",
+        "Mesurer le résultat",
+        "Recommencer"
+      ]
+    },
     "goal": {
-      "title": "🎯 Mon objectif est simple :",    
-      "description": "Aider les entreprises et entrepreneurs à donner vie à leurs projets digitaux avec des solutions modernes, performantes et évolutives."
+      "title": "Mon objectif est simple :",
+      "description": "Créer des choses et résoudre des problèmes, c'est ce qui me fait avancer. Je garde les deux aussi simples que nécessaire, pas plus.\n\nEt c'est ce que j'apporte à chaque client : une solution qui résout vraiment le problème, pas un pitch de plus. \n\nJuste des résultats."
+    },
+    "record": {
+      "title": "Résultats",
+      "items": [
+        "Latence API réduite de 99% sur un système en production gérant un catalogue de 2M+ pièces.",
+        "Poids JavaScript réduit de 93% en reconstruisant un site legacy de zéro.",
+        "Migration de plateformes legacy vers des stacks modernes sans interruption de service, à chaque fois."
+      ]
     }
   },
   "services": {
     "title": "Mes services",
-    "description": "Je propose des solutions sur mesure pour les indépendants, startups et PME, en mettant l'accent sur la qualité, l'innovation et l'expérience utilisateur.",
-    "web": {
-      "title": "Développement Web",
-      "description": [
-        "Conception de sites web responsives et performants",
-        "Développement d'applications web (+PWA)",
-        "Intégration API et gestion des bases de données"
-      ]
+    "build": {
+      "title": "Construire",
+      "description": "Je pars de zéro et je construis quelque chose qui tient encore debout des années après.",
+      "items": ["Go et API REST", "React / Next.js / Expo", "PostgreSQL & Supabase"]
     },
-    "mobile": {
-      "title": "Développement Mobile",
-      "description": [
-        "Développement d'applications mobiles hybrides",
-        "Création d'applications iOS et Android avec React Native",
-        "Optimisation des performances et de l'expérience utilisateur"
-      ]
+    "modernize": {
+      "title": "Moderniser",
+      "description": "Je prends ce qui est dépassé et je le fais avancer, sans une seule seconde d'interruption.",
+      "items": ["Du legacy vers des stacks modernes", "Audits techniques", "Architecture scalable"]
     },
-    "performance": {
-      "title": "Optimisation de Performance",
-      "description": [
-        "Audits techniques et amélioration des performances",
-        "Optimisation SEO et des temps de chargement"
-      ]
+    "improve": {
+      "title": "Améliorer",
+      "description": "Je ne devine pas ce qui est lent. Je le mesure, puis je le corrige.",
+      "items": ["Core Web Vitals", "Qualité du code", "Optimisation base de données"]
     },
-    "consulting": {
-      "title": "Consultation et Formation",
-      "description": [
-        "Conseil pour les entreprises souhaitant migrer vers des solutions modernes",
-        "Formations personnalisées sur les technologies utilisées",
-        "Analyse des besoins techniques"
-      ]
+    "integrate": {
+      "title": "Intégrer",
+      "description": "Pas de doc d'API ? Je fais du reverse-engineering et je fais en sorte que ça fonctionne.",
+      "items": ["Documentation", "Reverse-engineering", "Webhooks"]
     }
   },
   "projects": {
@@ -63,32 +76,10 @@
   },
   "pricing": {
     "title": "Tarifs",
-    "description": "Pour échanger sur votre projet ou obtenir un devis personnalisé, n'hésitez pas à me contacter.",
-    "rows": [
-      {
-        "type": "Mission courte",
-        "duration": "1 - 14 jours",
-        "rate": "400 $"
-      },
-      {
-        "type": "Mission standard",
-        "duration": "1 - 3 mois",
-        "rate": "450 $"
-      },
-      {
-        "type": "Mission longue",
-        "duration": "+3 mois",
-        "rate": "500 $"
-      },
-      {
-        "type": "Urgence",
-        "duration": "Soir / week-end",
-        "rate": "600 $"
-      }
-    ],
-    "labels": {
-      "rate": "Taux journalier"
-    }
+    "standard": { "title": "Mission standard", "duration": "1 - 3 mois", "rateLabel": "Tarif jour", "rate": "350$" },
+    "long": { "title": "Mission longue", "duration": "+3 mois", "rateLabel": "Tarif jour", "rate": "500$" },
+    "emergency": { "title": "Urgence", "duration": "Soir / weekend", "rateLabel": "Tarif jour", "rate": "1000$" },
+    "note": "Besoin d'un devis fixe à la place ? Parlons-en."
   },
   "contact": {
     "title": "Contact",

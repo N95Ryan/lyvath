@@ -14,7 +14,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ['"IBM Plex Sans"', "sans-serif"],
+        heading: ['"Geist Mono"', "monospace"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

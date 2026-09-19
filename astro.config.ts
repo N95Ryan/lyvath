@@ -6,11 +6,11 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   output: "static",
   adapter: vercel(),
-  site: "https://code-by-nayru.vercel.app",
+  site: "https://codebynayru.com/",
   integrations: [
     astroI18next({
       defaultLocale: "en",
-      locales: ["fr", "en"],
+      locales: ["en", "fr"],
       i18next: {
         debug: false,
         initImmediate: false,
@@ -20,10 +20,10 @@ export default defineConfig({
       },
       i18nextPlugins: { fsBackend: "i18next-fs-backend" },
       routes: {
-        fr: {
+        en: {
           prefixDefaultLocale: true,
         },
-        en: {
+        fr: {
           prefixDefaultLocale: false,
         },
       },
