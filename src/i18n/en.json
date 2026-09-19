@@ -76,10 +76,10 @@
   },
   "pricing": {
     "title": "Pricing",
-    "standard": { "title": "Standard mission", "duration": "1 - 3 months", "rateLabel": "Day Rate", "rate": "350$" },
-    "long": { "title": "Long mission", "duration": "+3 months", "rateLabel": "Day Rate", "rate": "500$" },
-    "emergency": { "title": "Emergency", "duration": "Evening / weekend", "rateLabel": "Day Rate", "rate": "1000$" },
-    "note": "Need a personalized quote instead? Let's talk about it."
+    "standard": { "title": "Standard mission", "duration": "1 - 3 months" },
+    "long": { "title": "Long mission", "duration": "+3 months" },
+    "emergency": { "title": "Emergency", "duration": "Evening / weekend" },
+    "note": "Every project is different. Scope, complexity and engagement length determine the rate. Need a personalized quote? Let's talk."
   },
   "contact": {
     "title": "Contact",
