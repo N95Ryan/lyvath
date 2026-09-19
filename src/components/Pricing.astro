@@ -8,34 +8,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = getTranslator(lang);
 
-interface PriceRow {
-  type: string;
-  duration: string;
-  rate: string;
-}
-
-const priceRows: PriceRow[] = [
-  {
-    type: t("pricing.rows.0.type"),
-    duration: t("pricing.rows.0.duration"),
-    rate: t("pricing.rows.0.rate"),
-  },
-  {
-    type: t("pricing.rows.1.type"),
-    duration: t("pricing.rows.1.duration"),
-    rate: t("pricing.rows.1.rate"),
-  },
-  {
-    type: t("pricing.rows.2.type"),
-    duration: t("pricing.rows.2.duration"),
-    rate: t("pricing.rows.2.rate"),
-  },
-  {
-    type: t("pricing.rows.3.type"),
-    duration: t("pricing.rows.3.duration"),
-    rate: t("pricing.rows.3.rate"),
-  },
-];
+const cards = ["standard", "long", "emergency"] as const;
 ---
 
 <section id="pricing" class="py-20 text-white">
@@ -44,26 +17,28 @@ const priceRows: PriceRow[] = [
       {t("pricing.title")}
     </h2>
     <div
-      class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto animate-fade-in"
+      class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-fade-in"
     >
       {
-        priceRows.map((row, i) => (
+        cards.map((key, i) => (
           <div
             class="bg-white/5 backdrop-blur-sm border border-white/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center animate-fade-in h-full"
             style={`animation-delay: ${i * 0.1}s`}
           >
             <div class="flex flex-col justify-start items-center w-full min-h-[64px]">
-              <h3 class="text-lg sm:text-xl font-bold mb-1">{row.type}</h3>
+              <h3 class="text-lg sm:text-xl font-bold mb-1">
+                {t(`pricing.${key}.title`)}
+              </h3>
               <div class="text-sm text-gray-400 mb-4 min-h-[24px]">
-                {row.duration}
+                {t(`pricing.${key}.duration`)}
               </div>
             </div>
             <div class="flex flex-col items-center w-full flex-grow justify-center">
               <span class="text-xs text-gray-400">
-                {t("pricing.labels.rate")}
+                {t(`pricing.${key}.rateLabel`)}
               </span>
               <span class="text-3xl font-bold text-indigo-400">
-                {row.rate}
+                {t(`pricing.${key}.rate`)}
               </span>
             </div>
           </div>
@@ -72,7 +47,7 @@ const priceRows: PriceRow[] = [
     </div>
     <div class="mt-12 text-center">
       <p class="text-gray-300 mb-6">
-        {t("pricing.description")}
+        {t("pricing.note")}
       </p>
     </div>
   </div>

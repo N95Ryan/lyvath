@@ -39,23 +39,23 @@
     "title": "Ce que je résous",
     "build": {
       "title": "Construire",
-      "description": "Nouvelles applications web et mobiles, API et systèmes backend.",
-      "items": ["React & Next.js", "React Native", "Go & PostgreSQL"]
+      "description": "Je pars de zéro et je construis quelque chose qui tient encore debout des années après.",
+      "items": ["Go et API REST", "React / Next.js / Expo", "PostgreSQL & Supabase"]
     },
     "modernize": {
       "title": "Moderniser",
-      "description": "Systèmes legacy, dette technique, architecture dépassée.",
-      "items": ["Migration vers des stacks modernes", "Audits techniques", "Refactoring progressif"]
+      "description": "Je prends ce qui est dépassé et je le fais avancer, sans une seule seconde d'interruption.",
+      "items": ["Du legacy vers des stacks modernes", "Audits techniques", "Architecture scalable"]
     },
     "improve": {
       "title": "Améliorer",
-      "description": "Performance, maintenabilité, fiabilité.",
+      "description": "Je ne devine pas ce qui est lent. Je le mesure, puis je le corrige.",
       "items": ["Core Web Vitals", "Qualité du code", "Optimisation base de données"]
     },
     "integrate": {
       "title": "Intégrer",
-      "description": "API, services tiers, systèmes existants.",
-      "items": ["API REST", "Intégrations tierces", "Pipelines de données"]
+      "description": "Pas de doc d'API ? Je fais du reverse-engineering et je fais en sorte que ça fonctionne.",
+      "items": ["Documentation", "Reverse-engineering", "Webhooks"]
     }
   },
   "projects": {
@@ -75,32 +75,10 @@
   },
   "pricing": {
     "title": "Tarifs",
-    "description": "Pour échanger sur votre projet ou obtenir un devis personnalisé, n'hésitez pas à me contacter.",
-    "rows": [
-      {
-        "type": "Mission courte",
-        "duration": "1 - 14 jours",
-        "rate": "400 $"
-      },
-      {
-        "type": "Mission standard",
-        "duration": "1 - 3 mois",
-        "rate": "450 $"
-      },
-      {
-        "type": "Mission longue",
-        "duration": "+3 mois",
-        "rate": "500 $"
-      },
-      {
-        "type": "Urgence",
-        "duration": "Soir / week-end",
-        "rate": "600 $"
-      }
-    ],
-    "labels": {
-      "rate": "Taux journalier"
-    }
+    "standard": { "title": "Mission standard", "duration": "1 - 3 mois", "rateLabel": "Tarif jour", "rate": "350$" },
+    "long": { "title": "Mission longue", "duration": "+3 mois", "rateLabel": "Tarif jour", "rate": "500$" },
+    "emergency": { "title": "Urgence", "duration": "Soir / weekend", "rateLabel": "Tarif jour", "rate": "1500$" },
+    "note": "Besoin d'un devis fixe à la place ? Parlons-en."
   },
   "contact": {
     "title": "Contact",

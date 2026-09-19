@@ -105,19 +105,7 @@ function getItems(key: string): string[] {
               <ul class="space-y-1 sm:space-y-2">
                 {items.map((item) => (
                   <li class="text-xs sm:text-sm text-gray-300 flex items-start">
-                    <svg
-                      class="w-3 h-3 sm:w-4 sm:h-4 text-purple-600 mr-2 mt-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
+                    <span class="text-cyan-400 mr-2 shrink-0" aria-hidden="true">•</span>
                     {item}
                   </li>
                 ))}
