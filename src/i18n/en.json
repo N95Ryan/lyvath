@@ -2,7 +2,8 @@
   "hero": {
     "title": "LYVATH",
     "subtitle": "Software Engineering",
-    "tagline": "Solutions over noise."
+    "tagline": "Solutions over noise.",
+    "scrollLabel": "Scroll down"
   },
   "about": {
     "title": "About",
@@ -78,7 +79,7 @@
     "standard": { "title": "Standard mission", "duration": "1 - 3 months", "rateLabel": "Day Rate", "rate": "350$" },
     "long": { "title": "Long mission", "duration": "+3 months", "rateLabel": "Day Rate", "rate": "500$" },
     "emergency": { "title": "Emergency", "duration": "Evening / weekend", "rateLabel": "Day Rate", "rate": "1000$" },
-    "note": "Need a fixed quote instead? Let's talk."
+    "note": "Need a personalized quote instead? Let's talk about it."
   },
   "contact": {
     "title": "Contact",

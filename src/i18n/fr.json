@@ -2,13 +2,14 @@
   "hero": {
     "title": "LYVATH",
     "subtitle": "Ingénierie Logicielle",
-    "tagline": "Des solutions, sans superflu."
+    "tagline": "Des solutions, sans superflu.",
+    "scrollLabel": "Faire défiler vers le bas"
   },
   "about": {
     "title": "À propos",
     "intro": {
       "brand": "LYVATH, c'est la marque.",
-      "engineer": "Et je suis l'ingénieur logiciel derrière : spécialisé en React, Go et leurs écosystèmes."
+      "engineer": "Et je suis Ryan, l'ingénieur logiciel derrière. Spécialisé en React, Go et leurs écosystèmes."
     },
     "decision": "Et cette expertise vient d'un choix clair : la profondeur plutôt que l'étendue.",
     "philosophy": "Pas de course aux tendances, pas de complexité inutile, juste des solutions pensées pour durer.",
@@ -36,7 +37,7 @@
     }
   },
   "services": {
-    "title": "Ce que je résous",
+    "title": "Mes services",
     "build": {
       "title": "Construire",
       "description": "Je pars de zéro et je construis quelque chose qui tient encore debout des années après.",

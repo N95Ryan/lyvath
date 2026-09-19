@@ -32,13 +32,13 @@ function getItems(key: string): string[] {
 }
 ---
 
-<section id="services" class="py-20 text-white">
-  <div class="container mx-auto px-4">
+<section id="services" class="py-12 md:py-20 text-white">
+  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6">
     <h2 class="section-heading text-center mb-10 md:mb-14">
       {t("services.title")}
     </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       {
         services.map((service, index) => {
           const items = getItems(service.key);
@@ -99,12 +99,12 @@ function getItems(key: string): string[] {
               <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-center">
                 {t(`services.${service.key}.title`)}
               </h3>
-              <p class="text-xs sm:text-sm text-gray-400 text-center leading-relaxed mb-4 sm:mb-5">
+              <p class="text-sm text-gray-400 text-center leading-relaxed mb-4 sm:mb-5">
                 {t(`services.${service.key}.description`)}
               </p>
               <ul class="space-y-2 sm:space-y-3">
                 {items.map((item) => (
-                  <li class="text-xs sm:text-sm text-gray-300 flex items-start">
+                  <li class="text-sm text-gray-300 flex items-start leading-relaxed">
                     <span
                       class="text-cyan-400 mr-2 shrink-0"
                       aria-hidden="true"

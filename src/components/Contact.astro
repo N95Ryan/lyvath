@@ -10,8 +10,8 @@ const { lang } = Astro.props;
 const t = getTranslator(lang as "fr" | "en");
 ---
 
-<section id="contact" class="py-20 text-white">
-  <div class="container mx-auto px-4">
+<section id="contact" class="py-12 md:py-20 text-white">
+  <div class="w-full max-w-3xl mx-auto px-4 sm:px-6">
     <h2 class="section-heading text-center mb-10 md:mb-14">
       {t("contact.title")}
     </h2>
