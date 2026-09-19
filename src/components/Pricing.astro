@@ -25,21 +25,11 @@ const cards = ["standard", "long", "emergency"] as const;
             class="bg-white/5 backdrop-blur-sm border border-white/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center animate-fade-in h-full"
             style={`animation-delay: ${i * 0.1}s`}
           >
-            <div class="flex flex-col justify-start items-center w-full min-h-[64px]">
-              <h3 class="text-lg sm:text-xl font-bold mb-1">
-                {t(`pricing.${key}.title`)}
-              </h3>
-              <div class="text-sm text-gray-400 mb-4 min-h-[24px]">
-                {t(`pricing.${key}.duration`)}
-              </div>
-            </div>
-            <div class="flex flex-col items-center w-full flex-grow justify-center">
-              <span class="text-xs text-gray-400">
-                {t(`pricing.${key}.rateLabel`)}
-              </span>
-              <span class="text-3xl font-bold text-indigo-400">
-                {t(`pricing.${key}.rate`)}
-              </span>
+            <h3 class="text-lg sm:text-xl font-bold mb-1">
+              {t(`pricing.${key}.title`)}
+            </h3>
+            <div class="text-sm text-gray-400">
+              {t(`pricing.${key}.duration`)}
             </div>
           </div>
         ))
