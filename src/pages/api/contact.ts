@@ -73,7 +73,7 @@ export const POST: APIRoute = async ({ request }) => {
     return jsonResponse(false, emailError, 400);
   }
 
-  const apiKey = import.meta.env.RESEND_API_KEY;
+  const apiKey = process.env.RESEND_API_KEY ?? import.meta.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error("[contact] RESEND_API_KEY is not configured");
     return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
@@ -93,11 +93,11 @@ export const POST: APIRoute = async ({ request }) => {
     });
 
     if (error) {
-      console.error("[contact] Resend error:", error.name);
+      console.error("[contact] Resend error:", error);
       return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
     }
   } catch (err) {
-    console.error("[contact] Unexpected send failure:", err instanceof Error ? err.name : "unknown");
+    console.error("[contact] Unexpected send failure:", err);
     return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
   }
 
