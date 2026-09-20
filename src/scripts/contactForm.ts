@@ -4,7 +4,7 @@ export function initContactForm(root: HTMLElement): void {
   const errorMessage = root.querySelector<HTMLElement>("#error-message");
   const submitButton = form?.querySelector<HTMLButtonElement>("button[type='submit']");
 
-  const API_URL = "/api/contact";
+  const API_URL = "/api/contact/";
   const currentLocale = document.documentElement.lang || "en";
   const formLoadedAt = Date.now();
 

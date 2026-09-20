@@ -1,4 +1,5 @@
 import type { APIRoute } from "astro";
+import { getSecret } from "astro:env/server";
 import { Resend } from "resend";
 import {
   isHoneypotTriggered,
@@ -25,6 +26,37 @@ function jsonResponse(success: boolean, message: string, status: number): Respon
     status,
     headers: { "Content-Type": "application/json" },
   });
+}
+
+function logServerError(context: string, error: unknown): void {
+  if (error === undefined) {
+    console.error(`[contact] ${context}`);
+    return;
+  }
+
+  if (error instanceof Error) {
+    console.error(`[contact] ${context}`, {
+      name: error.name,
+      message: error.message,
+      stack: error.stack,
+    });
+    return;
+  }
+
+  if (error && typeof error === "object") {
+    console.error(`[contact] ${context}`, error);
+    return;
+  }
+
+  console.error(`[contact] ${context}`, String(error));
+}
+
+function resolveResendApiKey(): string | undefined {
+  return (
+    getSecret("RESEND_API_KEY") ??
+    process.env.RESEND_API_KEY ??
+    import.meta.env.RESEND_API_KEY
+  );
 }
 
 export const POST: APIRoute = async ({ request }) => {
@@ -73,9 +105,9 @@ export const POST: APIRoute = async ({ request }) => {
     return jsonResponse(false, emailError, 400);
   }
 
-  const apiKey = process.env.RESEND_API_KEY ?? import.meta.env.RESEND_API_KEY;
+  const apiKey = resolveResendApiKey();
   if (!apiKey) {
-    console.error("[contact] RESEND_API_KEY is not configured");
+    logServerError("RESEND_API_KEY is not configured (check Vercel env for Production)", undefined);
     return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
   }
 
@@ -83,7 +115,7 @@ export const POST: APIRoute = async ({ request }) => {
   const form = { name, email, subject, message, locale };
 
   try {
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "LYVATH <contact@lyvath.dev>",
       to: "rpina.pro@gmail.com",
       replyTo: email,
@@ -93,11 +125,13 @@ export const POST: APIRoute = async ({ request }) => {
     });
 
     if (error) {
-      console.error("[contact] Resend error:", error);
+      logServerError("Resend API rejected the email", error);
       return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
     }
+
+    console.info("[contact] Email sent via Resend", { id: data?.id, to: "rpina.pro@gmail.com" });
   } catch (err) {
-    console.error("[contact] Unexpected send failure:", err);
+    logServerError("Unexpected failure while calling Resend", err);
     return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
   }
 
