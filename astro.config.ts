@@ -1,4 +1,5 @@
 import { defineConfig, envField } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 import astroI18next from "astro-i18next";
 import vercel from "@astrojs/vercel";
 
@@ -37,6 +38,7 @@ export default defineConfig({
         },
       },
     }),
+    sitemap(),
   ],
   vite: {
     resolve: {

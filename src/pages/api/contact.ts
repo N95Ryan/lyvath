@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { getSecret } from "astro:env/server";
 import { Resend } from "resend";
+import { getTranslator, resolveContactLang } from "@/i18n";
 import {
   isHoneypotTriggered,
   validateContactContent,
@@ -65,7 +66,8 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     payload = await request.json();
   } catch {
-    return jsonResponse(false, "Erreur lors de la lecture des données", 400);
+    const t = getTranslator("en");
+    return jsonResponse(false, t("contact.errors.parse"), 400);
   }
 
   const name = String(payload.name ?? "").trim();
@@ -75,32 +77,33 @@ export const POST: APIRoute = async ({ request }) => {
   const locale = String(payload.locale ?? "en");
   const company = String(payload.company ?? "");
   const formLoadedAt = Number(payload.formLoadedAt ?? 0);
+  const t = getTranslator(resolveContactLang(locale));
 
   if (isHoneypotTriggered(company)) {
-    return jsonResponse(true, "Message envoyé avec succès", 200);
+    return jsonResponse(true, t("contact.success"), 200);
   }
 
-  const timingError = validateSubmissionTiming(formLoadedAt);
+  const timingError = validateSubmissionTiming(formLoadedAt, locale);
   if (timingError) {
     return jsonResponse(false, timingError, 400);
   }
 
   if (!name) {
-    return jsonResponse(false, "Le nom est obligatoire", 400);
+    return jsonResponse(false, t("contact.errors.nameRequired"), 400);
   }
   if (!subject) {
-    return jsonResponse(false, "L'objet est obligatoire", 400);
+    return jsonResponse(false, t("contact.errors.subjectRequired"), 400);
   }
   if (!message) {
-    return jsonResponse(false, "Le message est obligatoire", 400);
+    return jsonResponse(false, t("contact.errors.messageRequired"), 400);
   }
 
-  const contentError = validateContactContent({ name, email, subject, message });
+  const contentError = validateContactContent({ name, email, subject, message }, locale);
   if (contentError) {
     return jsonResponse(false, contentError, 400);
   }
 
-  const emailError = validateEmail(email);
+  const emailError = validateEmail(email, locale);
   if (emailError) {
     return jsonResponse(false, emailError, 400);
   }
@@ -108,7 +111,7 @@ export const POST: APIRoute = async ({ request }) => {
   const apiKey = resolveResendApiKey();
   if (!apiKey) {
     logServerError("RESEND_API_KEY is not configured (check Vercel env for Production)", undefined);
-    return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
+    return jsonResponse(false, t("contact.error"), 500);
   }
 
   const resend = new Resend(apiKey);
@@ -126,14 +129,14 @@ export const POST: APIRoute = async ({ request }) => {
 
     if (error) {
       logServerError("Resend API rejected the email", error);
-      return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
+      return jsonResponse(false, t("contact.error"), 500);
     }
 
     console.info("[contact] Email sent via Resend", { id: data?.id, to: "rpina.pro@gmail.com" });
   } catch (err) {
     logServerError("Unexpected failure while calling Resend", err);
-    return jsonResponse(false, "Erreur lors de l'envoi du message", 500);
+    return jsonResponse(false, t("contact.error"), 500);
   }
 
-  return jsonResponse(true, "Message envoyé avec succès", 200);
+  return jsonResponse(true, t("contact.success"), 200);
 };

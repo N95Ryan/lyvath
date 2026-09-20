@@ -1,3 +1,5 @@
+import { getTranslator, resolveContactLang } from "@/i18n";
+
 export const FIELD_LIMITS = {
   nameMin: 2,
   nameMax: 100,
@@ -40,35 +42,36 @@ export interface ContactFields {
   message: string;
 }
 
-export function validateContactContent(fields: ContactFields): string | null {
+export function validateContactContent(fields: ContactFields, locale: string): string | null {
+  const t = getTranslator(resolveContactLang(locale));
   const { name, subject, message } = fields;
 
   if (name.length < FIELD_LIMITS.nameMin) {
-    return "Le nom doit contenir au moins 2 caractères";
+    return t("contact.errors.nameMin");
   }
   if (name.length > FIELD_LIMITS.nameMax) {
-    return "Le nom ne doit pas dépasser 100 caractères";
+    return t("contact.errors.nameMax");
   }
   if (subject.length < FIELD_LIMITS.subjectMin) {
-    return "L'objet doit contenir au moins 3 caractères";
+    return t("contact.errors.subjectMin");
   }
   if (subject.length > FIELD_LIMITS.subjectMax) {
-    return "L'objet ne doit pas dépasser 200 caractères";
+    return t("contact.errors.subjectMax");
   }
   if (message.length < FIELD_LIMITS.messageMin) {
-    return "Le message doit contenir au moins 10 caractères";
+    return t("contact.errors.messageMin");
   }
   if (message.length > FIELD_LIMITS.messageMax) {
-    return "Le message ne doit pas dépasser 2000 caractères";
+    return t("contact.errors.messageMax");
   }
   if (countWords(message) < 2) {
-    return "Le message doit contenir au moins 2 mots";
+    return t("contact.errors.messageWords");
   }
   if (isGibberish(subject)) {
-    return "L'objet semble invalide";
+    return t("contact.errors.subjectInvalid");
   }
   if (isGibberish(message)) {
-    return "Le message semble invalide";
+    return t("contact.errors.messageInvalid");
   }
 
   return null;
@@ -78,28 +81,32 @@ export function isHoneypotTriggered(company: string): boolean {
   return company.trim().length > 0;
 }
 
-export function validateSubmissionTiming(formLoadedAt: number): string | null {
+export function validateSubmissionTiming(formLoadedAt: number, locale: string): string | null {
+  const t = getTranslator(resolveContactLang(locale));
+
   if (!formLoadedAt || formLoadedAt <= 0) {
-    return "Soumission trop rapide";
+    return t("contact.tooFast");
   }
   if (Date.now() - formLoadedAt < MIN_SUBMIT_DELAY_MS) {
-    return "Soumission trop rapide";
+    return t("contact.tooFast");
   }
   return null;
 }
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-export function validateEmail(email: string): string | null {
+export function validateEmail(email: string, locale: string): string | null {
+  const t = getTranslator(resolveContactLang(locale));
   const trimmed = email.trim();
+
   if (!trimmed) {
-    return "L'email est obligatoire";
+    return t("contact.errors.emailRequired");
   }
   if (trimmed.length > FIELD_LIMITS.emailMax) {
-    return "L'email ne doit pas dépasser 254 caractères";
+    return t("contact.errors.emailMax");
   }
   if (!EMAIL_REGEX.test(trimmed)) {
-    return "Format d'email invalide";
+    return t("contact.errors.emailInvalid");
   }
   return null;
 }

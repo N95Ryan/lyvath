@@ -9,6 +9,10 @@ const translations = {
 
 type Language = keyof typeof translations;
 
+export function resolveContactLang(locale: string): Language {
+  return locale === "fr" ? "fr" : "en";
+}
+
 export function getTranslator(lang: Language) {
   return function t(key: string): string {
     const keys = key.split('.');

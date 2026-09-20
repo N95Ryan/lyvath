@@ -9,7 +9,7 @@
     "title": "À propos",
     "intro": {
       "brand": "LYVATH, c'est la marque.",
-      "engineer": "Et je suis Ryan, l'ingénieur logiciel derrière. Spécialisé en React, Go et leurs écosystèmes."
+      "engineer": "Et je suis Ryan PINA-SILASSE, l'ingénieur logiciel derrière.\n\nSpécialisé en React, Go et leurs écosystèmes."
     },
     "decision": "Et cette expertise vient d'un choix clair : la profondeur plutôt que l'étendue.",
     "philosophy": "Pas de course aux tendances, pas de complexité inutile, juste des solutions pensées pour durer.",
@@ -91,9 +91,30 @@
     "sending": "Envoi en cours...",
     "tooFast": "Soumission trop rapide. Veuillez réessayer.",
     "success": "Message envoyé avec succès !",
-    "error": "Une erreur est survenue. Veuillez réessayer."
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "errors": {
+      "parse": "Erreur lors de la lecture des données.",
+      "nameRequired": "Le nom est obligatoire.",
+      "subjectRequired": "L'objet est obligatoire.",
+      "messageRequired": "Le message est obligatoire.",
+      "nameMin": "Le nom doit contenir au moins 2 caractères.",
+      "nameMax": "Le nom ne doit pas dépasser 100 caractères.",
+      "subjectMin": "L'objet doit contenir au moins 3 caractères.",
+      "subjectMax": "L'objet ne doit pas dépasser 200 caractères.",
+      "messageMin": "Le message doit contenir au moins 10 caractères.",
+      "messageMax": "Le message ne doit pas dépasser 2000 caractères.",
+      "messageWords": "Le message doit contenir au moins 2 mots.",
+      "subjectInvalid": "L'objet semble invalide.",
+      "messageInvalid": "Le message semble invalide.",
+      "emailRequired": "L'email est obligatoire.",
+      "emailMax": "L'email ne doit pas dépasser 254 caractères.",
+      "emailInvalid": "Format d'email invalide."
+    }
   },
   "footer": {
-    "copyright": "Tous droits réservés"
+    "copyright": "Tous droits réservés",
+    "authorLabel": "Auteur",
+    "author": "Ryan Pina-Silasse",
+    "location": "Drummondville, Québec."
   }
-} 
+}

@@ -26,9 +26,13 @@ const processStepLine =
     <p class="body-copy animate-fade-in [animation-delay:0.2s]">
       {t("about.intro.brand")}
     </p>
-    <p class="body-copy animate-fade-in [animation-delay:0.2s]">
-      {t("about.intro.engineer")}
-    </p>
+    {
+      t("about.intro.engineer")
+        .split("\n\n")
+        .map((paragraph) => (
+          <p class="body-copy animate-fade-in [animation-delay:0.2s]">{paragraph}</p>
+        ))
+    }
     <p class="body-copy animate-fade-in [animation-delay:0.2s]">
       {t("about.decision")}
     </p>
