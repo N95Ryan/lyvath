@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import astroI18next from "astro-i18next";
 import vercel from "@astrojs/vercel";
 
@@ -7,6 +7,15 @@ export default defineConfig({
   output: "static",
   adapter: vercel(),
   site: "https://www.lyvath.dev",
+  env: {
+    schema: {
+      RESEND_API_KEY: envField.string({
+        context: "server",
+        access: "secret",
+        optional: true,
+      }),
+    },
+  },
   integrations: [
     astroI18next({
       defaultLocale: "en",
