@@ -7,6 +7,8 @@ export function initContactForm(root: HTMLElement): void {
   const API_URL = "/api/contact/";
   const currentLocale = document.documentElement.lang || "en";
   const formLoadedAt = Date.now();
+  const fallbackSuccessMessage = root.dataset.successMessage ?? "";
+  const fallbackErrorMessage = root.dataset.errorMessage ?? "An error occurred. Please try again.";
 
   const defaultSendLabel =
     submitButton?.dataset.sendLabel || submitButton?.textContent || "Envoyer le message";
@@ -44,11 +46,11 @@ export function initContactForm(root: HTMLElement): void {
 
       if (response.ok) {
         form.reset();
-        successMessage.textContent = result.message ?? "";
+        successMessage.textContent = result.message ?? fallbackSuccessMessage;
         successMessage.classList.remove("hidden");
         errorMessage.classList.add("hidden");
       } else {
-        errorMessage.textContent = result.message || "Une erreur est survenue. Veuillez réessayer.";
+        errorMessage.textContent = result.message || fallbackErrorMessage;
         errorMessage.classList.remove("hidden");
         successMessage.classList.add("hidden");
       }
@@ -58,7 +60,7 @@ export function initContactForm(root: HTMLElement): void {
         errorMessage.classList.add("hidden");
       }, 5000);
     } catch {
-      errorMessage.textContent = "Une erreur est survenue. Veuillez réessayer.";
+      errorMessage.textContent = fallbackErrorMessage;
       errorMessage.classList.remove("hidden");
       successMessage.classList.add("hidden");
       setTimeout(() => {

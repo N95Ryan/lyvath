@@ -10,7 +10,12 @@ const { lang } = Astro.props;
 const t = getTranslator(lang as "fr" | "en");
 ---
 
-<section id="contact" class="py-12 md:py-20 text-white">
+<section
+  id="contact"
+  class="py-12 md:py-20 text-white"
+  data-success-message={t("contact.success")}
+  data-error-message={t("contact.error")}
+>
   <div class="w-full max-w-3xl mx-auto px-4 sm:px-6">
     <h2 class="section-heading text-center mb-10 md:mb-14">
       {t("contact.title")}

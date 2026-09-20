@@ -9,7 +9,7 @@
     "title": "About",
     "intro": {
       "brand": "LYVATH is the brand.",
-      "engineer": "And I'm Ryan, the software engineer behind it. Specialized in React, Go and their ecosystems."
+      "engineer": "And I'm Ryan PINA-SILASSE, the software engineer behind it.\n\nSpecialized in React, Go and their ecosystems."
     },
     "decision": "That expertise comes from one clear decision: depth over breadth.",
     "philosophy": "No trend-chasing, no unnecessary complexity, just solutions built to last.",
@@ -64,7 +64,7 @@
     "sfr": {
       "title": "SFR Business",
       "description": "Modernization of SFR Business's internal tools to make them more efficient and easier to use."
-    }, 
+    },
     "spotr": {
       "title": "Spotr",
       "description": "Mobile application dedicated to photographers, to spot and record photo spots around the world."
@@ -91,9 +91,30 @@
     "sending": "Sending...",
     "tooFast": "Submission too fast. Please try again.",
     "success": "Message sent successfully!",
-    "error": "An error occurred. Please try again."
+    "error": "An error occurred. Please try again.",
+    "errors": {
+      "parse": "Could not read the submitted data.",
+      "nameRequired": "Name is required.",
+      "subjectRequired": "Subject is required.",
+      "messageRequired": "Message is required.",
+      "nameMin": "Name must be at least 2 characters.",
+      "nameMax": "Name must not exceed 100 characters.",
+      "subjectMin": "Subject must be at least 3 characters.",
+      "subjectMax": "Subject must not exceed 200 characters.",
+      "messageMin": "Message must be at least 10 characters.",
+      "messageMax": "Message must not exceed 2000 characters.",
+      "messageWords": "Message must contain at least 2 words.",
+      "subjectInvalid": "Subject appears invalid.",
+      "messageInvalid": "Message appears invalid.",
+      "emailRequired": "Email is required.",
+      "emailMax": "Email must not exceed 254 characters.",
+      "emailInvalid": "Invalid email format."
+    }
   },
   "footer": {
-    "copyright": "All rights reserved"
+    "copyright": "All rights reserved",
+    "authorLabel": "Author",
+    "author": "Ryan Pina-Silasse",
+    "location": "Drummondville, QC."
   }
-} 
+}
