@@ -1,12 +1,14 @@
 import { defineConfig, envField } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import astroI18next from "astro-i18next";
-import vercel from "@astrojs/vercel";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  adapter: vercel(),
+  adapter: cloudflare({
+    session: false,
+  }),
   site: "https://www.lyvath.dev",
   env: {
     schema: {

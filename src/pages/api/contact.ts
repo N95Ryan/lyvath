@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { getSecret } from "astro:env/server";
+import { env } from "cloudflare:workers";
 import { Resend } from "resend";
 import { getTranslator, resolveContactLang } from "@/i18n";
 import {
@@ -55,8 +56,8 @@ function logServerError(context: string, error: unknown): void {
 function resolveResendApiKey(): string | undefined {
   return (
     getSecret("RESEND_API_KEY") ??
-    process.env.RESEND_API_KEY ??
-    import.meta.env.RESEND_API_KEY
+    env.RESEND_API_KEY ??
+    process.env.RESEND_API_KEY
   );
 }
 

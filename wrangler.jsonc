@@ -1,0 +1,8 @@
+{
+  "name": "lyvath",
+  "compatibility_date": "2026-10-31",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  }
+}
