@@ -6,8 +6,10 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
+  session: false,
   adapter: cloudflare({
-    session: false,
+    imageService: "passthrough",
+    prerenderEnvironment: "node",
   }),
   site: "https://www.lyvath.dev",
   env: {
