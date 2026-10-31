@@ -111,7 +111,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const apiKey = resolveResendApiKey();
   if (!apiKey) {
-    logServerError("RESEND_API_KEY is not configured (check Vercel env for Production)", undefined);
+    logServerError("RESEND_API_KEY is not configured (check Cloudflare Worker secrets)", undefined);
     return jsonResponse(false, t("contact.error"), 500);
   }
 
