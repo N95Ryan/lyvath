@@ -76,10 +76,30 @@
   },
   "pricing": {
     "title": "Tarifs",
-    "standard": { "title": "Mission standard", "duration": "1 - 3 mois" },
-    "long": { "title": "Mission longue", "duration": "+3 mois" },
-    "emergency": { "title": "Urgence", "duration": "Soir / weekend" },
-    "note": "Chaque projet est différent. Le périmètre, la complexité et la durée de l'engagement déterminent le tarif. Besoin d'un devis personnalisé ? Parlons-en."
+    "essential": {
+      "title": "Essentiel",
+      "tagline": "Pour se présenter et être trouvé.",
+      "price": "4\u00a0000\u00a0$*",
+      "maintenance": "Maintenance : 75 $/mois",
+      "scope": "Jusqu'à 5 pages"
+    },
+    "standard": {
+      "title": "Standard",
+      "tagline": "Pour plus de contenu, en deux langues.",
+      "price": "7\u00a0500\u00a0$*",
+      "maintenance": "Maintenance : 125 $/mois",
+      "scope": "Jusqu'à 12 pages, FR/EN"
+    },
+    "custom": {
+      "title": "Sur mesure",
+      "tagline": "Pour des fonctionnalités adaptées à vos besoins.",
+      "price": "Dès 12\u00a0000\u00a0$*",
+      "maintenance": "Maintenance : 200 $/mois",
+      "scope": "Fonctionnalités spécifiques"
+    },
+    "maintenance": "Maintenance sans engagement, résiliable à tout moment : surveillance, mises à jour et petites corrections.",
+    "extras": "Audit : 750 $ · Missions d'ingénierie logicielle : sur devis",
+    "note": "*Le périmètre et la complexité peuvent ajuster le prix final. Besoin d'un devis personnalisé ? Parlons-en."
   },
   "contact": {
     "title": "Contact",
